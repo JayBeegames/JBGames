@@ -1,5 +1,5 @@
 """
-Django settings for JBGamesSite project.
+Django settings for JBGamesSite3 project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^a-eovmo)#!*c1a)z%p3alk=2^qes(1(1y7bo255(pgk0xd_6$'
+SECRET_KEY = 'ulc3!_278jlyuksa!b3scz&0q-xz+ga=7@f7r#guyt&b=g614('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    'polls',
+    'News',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -49,9 +49,13 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'JBGamesSite.urls'
+ROOT_URLCONF = 'JBGamesSite3.urls'
 
-WSGI_APPLICATION = 'JBGamesSite.wsgi.application'
+TEMPLATE_DIRS = (
+    "templates"
+)
+
+WSGI_APPLICATION = 'JBGamesSite3.wsgi.application'
 
 
 # Database
@@ -60,7 +64,10 @@ WSGI_APPLICATION = 'JBGamesSite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'MyDatabase',
+        'NAME': 'jbgames',
+        'USER': 'root',
+        'PASSWORD': 'niggerjuice69',
+        'HOST': 'localhost',
     }
 }
 
